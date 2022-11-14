@@ -39,6 +39,20 @@ counter += 5
 let number = 120
 print(number.isMultiple(of: 3))
 
+let number1 = 0.1 + 0.2
+print(number1) // Since Xcode considers it as "Double precision floating number" it ats some digits to it
+
+let a = 1
+let b = 2.0
+//let c = a + b
+let d = a + Int(b) // To calculate it Swifth requres us to explicitely define the format
+
+let people = "Haters"
+let action = "hate"
+let lyric = people + " gonna " + action
+
+let luggaeCode = "1" + "2" + "3" + "4"
+luggaeCode +1
 
 
 
