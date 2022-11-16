@@ -112,3 +112,80 @@ archEnemies["Batman"] = "Penguin" // It overwrote the previous Batman value
 
 
 var readings: [Bool] = [false, false, true, false]
+
+
+//let ships = ["Star Trek", "Enterprise"]
+//let enterprise = ships["Star Trek"]
+
+
+print("----------------------")
+
+
+let planets = [1: "Mercury", 2: "Venus"]
+let venus = planets[2, default: "Planet X"]
+
+
+print("----------------------")
+
+
+let capitals = ["England": "London", "Wales": "Cardiff"]
+let scotlandCapital = capitals["Scotland"]
+
+
+print("----------------------")
+
+
+let prices = ["Milk": 1, "Pepsi": 2]
+//let first = prices[1]  // #learn
+
+
+print("----------------------")
+
+let albums2 = ["Prince": "Purple Rain"]
+let beatles2 = albums2["Beatles"]
+
+
+print("----------------------")
+
+
+let abbreviations = ["m": "meters", "km": "kilometers"]
+//let meters = abbreviations["m", default "m"]
+
+
+print("----------------------")
+
+
+let characters2 = ["Captain": "Malcolm", "Engineer": "Kaylee"]
+let captain2 = characters2["Captain"]
+
+
+print("----------------------")
+
+
+let scores3 = ["Paul": 80, "Sophie": 100]
+//let john3 = scores3[john]
+
+
+print("----------------------")
+
+let people4 = Set(["Denzel Washington", "Tom Cruise", "Nicolas Cage", "Samuel L Jackson"])
+print(people4)
+
+
+print("----------------------")
+
+
+var actors = Set<String>()
+actors.insert("Denzel Washington")
+actors.insert("Tom Cruise")
+actors.insert("Nicolas Cage")
+actors.insert("Samuel L Jackson")
+
+print(actors)
+
+
+print("----------------------")
+
+var readings2 = Set([true, false, true, true])
+
+var attendees = Set([100, 100, 101, 100])
