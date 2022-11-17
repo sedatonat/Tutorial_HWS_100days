@@ -189,3 +189,5 @@ print("----------------------")
 var readings2 = Set([true, false, true, true])
 
 var attendees = Set([100, 100, 101, 100])
+
+// Test 17.11
