@@ -23,11 +23,11 @@ print("-------------------------------")
 
 for i in 1..<4 {
     print("The \(i) times table:")
-
+    
     for j in 1...2 {
         print("  \(j) x \(i) is \(j * i)")
     }
-
+    
     print()
 }
 
@@ -97,8 +97,75 @@ for filename in filenames {
     if filename.hasSuffix(".jpg") == false {
         continue
     }
-
+    
     print("Found picture: \(filename)")
 }
 
 print("-------------------------------")
+
+let number1 = 10
+let number2 = 14
+var multiples = [Int]()
+
+for i in 1...100_000 {
+    if i.isMultiple(of: number1) && i.isMultiple(of: number2) {
+        multiples.append(i)
+        
+        if multiples.count == 10 {
+            break
+        }
+    }
+}
+
+print(multiples)
+
+print("-------------------------------")
+
+let scores = [1, 8, 4, 3, 0, 5, 2]
+var count = 0
+
+for score in scores {
+    if score == 0 {
+        break
+    }
+    
+    count += 1
+}
+
+print("You had \(count) scores before you got 0.")
+
+print("-------------------------------")
+
+var password = "1"
+while true {
+    password += "1"
+    if password == "11111" {
+        print("That's a terrible password.")
+    }
+    break
+}
+
+
+print("-------------------------------")
+
+//for i in 1...100 {
+//    var i = 0
+//    let multiple3 = 3
+//    let multiple5 = 5
+//    if multiple3.isMultiple(of: multiple3)
+//    { print("Fizz") }
+//    if multiple5.isMultiple(of: multiple5)
+//    { print("Buzz") }
+//    if multiple3.isMultiple(of: multiple3) && multiple5.isMultiple(of: multiple5)
+//    { print("FizzBuzz") }
+//    if !multiple3.isMultiple(of: multiple3) && !multiple5.isMultiple(of: multiple5)
+//    { print(i) }
+//}
+
+
+for i in 1...100 {
+    if i % 3 != 0 { if i % 5 != 0 { print(i)}}
+    if i % 3 == 0 { print("\(i) = Fizz")}
+    if i % 5 == 0 { print("\(i) = Buzz")}
+    if i % 3 == 0 { if i % 5 == 0 { print("\(i) = FizzBuzz")}}
+}
