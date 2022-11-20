@@ -216,5 +216,59 @@ func getUser() -> (firstName: String, lastName: String) {
 //print("Name: \(firstName) \(lastName)")
 
 // Short version
-let (firstName, lastName) = getUser()
-print("Name: \(firstName) \(lastName)")
+//let (firstName, lastName) = getUser()
+//print("Name: \(firstName) \(lastName)")
+
+// If you want to use ony one field you should use "_" instead of that field
+let (firstName, _) = getUser()
+print("Name: \(firstName)")
+
+print("-------------------------------------------------------------------")
+
+func rollDice(sides: Int, count: Int) -> [Int] {
+    // Start with an empty array
+    var rolls = [Int]()
+
+    // Roll as many dice as needed
+    for _ in 1...count {
+        // Add each result to our array
+        let roll = Int.random(in: 1...sides)
+        rolls.append(roll)
+    }
+
+    // Send back all the rolls
+    return rolls
+}
+   
+let rolls = rollDice(sides: 6, count: 2)
+
+print("-------------------------------------------------------------------")
+
+// With parameter name
+func climbMountain0(name: String) {
+    print("I'm going to climb \(name).")
+}
+climbMountain0(name:"Everest")
+
+
+print("-------------------------------------------------------------------")
+
+// Without parameter name
+func climbMountain1(_ name: String) {
+    print("I'm going to climb \(name).")
+}
+climbMountain1("Everest")
+
+
+print("-------------------------------------------------------------------")
+
+func isEveryoneCanadian(_ birthCountries: [String]) {
+    for country in birthCountries {
+        if country != "Canada" {
+            return false
+        }
+    }
+    return true
+}
+
+
