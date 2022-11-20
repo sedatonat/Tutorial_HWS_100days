@@ -182,7 +182,7 @@ print(greet(name:"Sedat"))
 
 print("-------------------------------------------------------------------")
 
-// Ternary Conitional
+// Ternary Conditional
 func greet2(name: String) -> String {
     name == "Taylor Swift" ? "Oh wow!" : "Hello, \(name)"
 }
@@ -191,7 +191,7 @@ print(greet2(name:"Sedat"))
 
 print("-------------------------------------------------------------------")
 
-// withou return, it does not output the result outside of the function
+// without return, it does not output the result outside of the function
 func greet3(name: String) {
     if name == "Taylor Swift" {
         "Oh wow!"
@@ -203,3 +203,18 @@ func greet3(name: String) {
 print(greet3(name:"Sedat"))
 
 
+print("-------------------------------------------------------------------")
+
+func getUser() -> (firstName: String, lastName: String) {
+    (firstName: "Taylor", lastName: "Swift")
+}
+
+// Long version
+//let user = getUser()
+//let firstName = user.firstName
+//let lastName = user.lastName
+//print("Name: \(firstName) \(lastName)")
+
+// Short version
+let (firstName, lastName) = getUser()
+print("Name: \(firstName) \(lastName)")
