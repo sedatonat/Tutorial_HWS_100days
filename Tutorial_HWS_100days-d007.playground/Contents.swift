@@ -9,7 +9,8 @@ func showWelcome() {
 
 print(showWelcome())
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 func showWelcome2() {
     print("""
@@ -22,11 +23,13 @@ func showWelcome2() {
 
 print(showWelcome2())
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 let roll = Int.random(in: 1...20)
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 func printTimesTables(number: Int) {
     for i in 1...12 {
@@ -36,7 +39,8 @@ func printTimesTables(number: Int) {
 
 printTimesTables(number: 10)
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 func printTimesTables(number: Int, end: Int) {
     for i in 1...end {
@@ -59,9 +63,7 @@ printTimesTables(number: 5, end: 20)
  */
 
 
-
-
-print("----------------------------")
+print("-------------------------------------------------------------------")
 
 func listOriginalStarWarsMovies() {
     for i in 4...6 {
@@ -71,7 +73,8 @@ func listOriginalStarWarsMovies() {
 
 listOriginalStarWarsMovies()
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 func scoreGoal(count: Int) {
     print("Gooooaaaal! \(count)")
@@ -80,7 +83,8 @@ scoreGoal(count:1)
 scoreGoal(count:2)
 scoreGoal(count:3)
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 func shipOrders() {
     let orders = [1, 2, 3, 4, 5]
@@ -90,13 +94,15 @@ func shipOrders() {
 }
 shipOrders()
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 func playMusic() {
     print("Here's some Ed Sheeran.")
 }
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 func count(to: Int) {
     for i in 1...to {
@@ -104,7 +110,8 @@ func count(to: Int) {
     }
 }
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 func square(numbers: [Int]) {
     for number in numbers {
@@ -114,7 +121,8 @@ func square(numbers: [Int]) {
 }
 square(numbers: [2, 3, 4])
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 func sendTweet(text: String) {
     for tweetText in text {
@@ -122,7 +130,8 @@ func sendTweet(text: String) {
     }
 }
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 let root = sqrt(169)
 print(root)
@@ -138,7 +147,8 @@ func areLettersIdentical(string1: String, string2: String) -> Bool {
     string1.sorted() == string2.sorted()
 }
  
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
 
 let isAdmin = true
 let isOwner = false
@@ -147,7 +157,17 @@ let isEditingEnabled = false
 isOwner == true && isEditingEnabled || isAdmin == true
 isOwner == true && (isEditingEnabled || isAdmin == true)
 
-print("----------------------------")
+
+print("-------------------------------------------------------------------")
+
+func rollDice2() -> Int {
+    Int.random(in: 1...6)
+}
+
+rollDice2()
+
+
+print("-------------------------------------------------------------------")
 
 // Standart if-else conditional
 func greet(name: String) -> String {
@@ -160,7 +180,7 @@ func greet(name: String) -> String {
 
 print(greet(name:"Sedat"))
 
-print("----------------------------")
+print("-------------------------------------------------------------------")
 
 // Ternary Conitional
 func greet2(name: String) -> String {
@@ -169,9 +189,9 @@ func greet2(name: String) -> String {
 
 print(greet2(name:"Sedat"))
 
-print("----------------------------")
+print("-------------------------------------------------------------------")
 
-// withou return, it does not outputs the result outside of the func
+// withou return, it does not output the result outside of the function
 func greet3(name: String) {
     if name == "Taylor Swift" {
         "Oh wow!"
