@@ -63,7 +63,7 @@ do {
 
 print("-----------------------------------------------------------")
 
-// Checkpoint 4 Test
+// HWS Checkpoint 4 Test
 
 enum RootError: Error {
     case tooLow, tooHigh, notFound
@@ -79,11 +79,16 @@ func squareRoot(of number: Int) throws -> Int {
         throw RootError.tooHigh
     }
 
+    
+    // Math
     for i in 1...100 {
         if i * i == number {
             return i
         }
     }
+    
+    
+    // No match in loop
     throw RootError.notFound
 }
 
@@ -101,5 +106,21 @@ do {
 } catch {
     print("Sorry, there was a problem.")
 }
+
+print("-----------------------------------------------------------")
+
+
+func squareRoot2(of number2: Int) throws -> Int {
+
+    // Math
+    for i in 1...10 {
+        if i * i == number {
+            return i
+        }
+    }
+
+}
+
+let number2 = 100
 
 
