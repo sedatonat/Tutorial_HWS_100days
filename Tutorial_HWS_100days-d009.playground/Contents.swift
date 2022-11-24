@@ -38,7 +38,7 @@ func captainFirstSorted(name1: String, name2: String) -> Bool {
     } else if name2 == "Suzanne" {
         return false
     }
-
+    
     return name1 < name2
 }
 
@@ -145,3 +145,61 @@ var costToShootMovie = { (location: String) -> Int in
     }
 }
 print(costToShootMovie("UK"))
+
+
+print("----------------------------------------------------------------")
+
+func animate(duration: Double, animations: () -> Void ) {
+    print("Starting a \(duration) second animation…")
+    animations()
+}
+
+print("---")
+
+animate(duration: 3, animations: {
+    print("Fade out the image")
+})
+
+print("----------------------------------------------------------------")
+
+let payment1 = { (user: String) -> Bool in
+    print("Paying \(user)…")
+    return true
+}
+
+payment1("sedat")
+
+
+let payment2 = { (user: String) in
+    print("Paying \(user)…")
+}
+
+payment2("sedat")
+
+
+print("----------------------------------------------------------------")
+
+var invoice_amount = 20.0
+var total = Double()
+
+func VAT_Incl_20_a (sum_wo_vat: Double) -> Double {
+    sum_wo_vat * 1.2
+}
+
+VAT_Incl_20_a(sum_wo_vat:invoice_amount)
+//total = (VAT_Incl_20_a) * 2 #learn
+
+
+//print("VAT Incl \(VAT_Incl_20_a(sum_wo_vat: 20))")
+
+
+print("---")
+
+
+let VAT_Incl_20_b = {(sum_wo_vat: Double) in
+    print("VAT Incl \((sum_wo_vat)*1.2)")
+}
+
+//VAT_Incl_20_b(invoice_amount)
+
+
