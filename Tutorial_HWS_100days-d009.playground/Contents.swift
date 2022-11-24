@@ -201,3 +201,133 @@ let VAT_Incl_20_b = {(sum_wo_vat: Double) in
 VAT_Incl_20_b(invoice_amount)
 
 
+print("----------------------------------------------------------------")
+
+func greetUser() {
+    print("Hi there!")
+}
+
+greetUser()
+
+var greetCopy: () -> Void = greetUser
+greetCopy()
+
+
+print("----------------------------------------------------------------")
+
+func makeArray(size: Int, using generator: () -> Int) -> [Int] {
+    var numbers = [Int]()
+
+    for _ in 0..<size {
+        let newNumber = generator()
+        numbers.append(newNumber)
+    }
+
+    return numbers
+}
+
+let rolls = makeArray(size: 5) {
+    Int.random(in: 1...20)
+}
+
+print(rolls)
+
+
+print("----------------------------------------------------------------")
+
+func doImportantWork(first: () -> Void, second: () -> Void, third: () -> Void) {
+    print("About to start first work")
+    first()
+    print("About to start second work")
+    second()
+    print("About to start third work")
+    third()
+    print("Done!")
+}
+
+doImportantWork {
+    print("This is the first work")
+} second: {
+    print("This is the second work")
+} third: {
+    print("This is the third work")
+}
+
+
+print("----------------------------------------------------------------")
+
+var makeFromStraw = {
+    print("Let's build it out of straw")
+}
+func buildHouse(using buildingStyle: () -> Void) {
+    buildingStyle ()
+    print("It's ready - can anyone blow it down?")
+}
+
+
+print("----------------------------------------------------------------")
+
+let swanDive = {
+    print("SWAN DIVE!")
+}
+func performDive(type dive: () -> Void) {
+    print("I'm climbing up to the top")
+    dive()
+}
+performDive(type: swanDive)
+
+
+print("----------------------------------------------------------------")
+
+var payCash = {
+    print("Here's the money.")
+}
+func buyClothes(item: String, using payment: () -> Void) {
+    print("I'll take this \(item).")
+    payment()
+}
+buyClothes(item: "jacket", using: payCash)
+
+
+print("----------------------------------------------------------------")
+
+var learnWithUnwrap = {
+    print("Hey, this is fun!")
+}
+func learnSwift(using approach: () -> Void) {
+    print("I'm learning Swift")
+    approach()
+}
+learnSwift(using: learnWithUnwrap)
+
+
+print("----------------------------------------------------------------")
+
+func doTricks(_ tricks: () -> Void) {
+    print("Start recording now!")
+    tricks()
+    print("Did you get all that?")
+}
+
+
+print("----------------------------------------------------------------")
+
+/* Hacking With Swift - Day-9 Challange Solution
+ 
+ Job:
+ - Filter out any numbers that are even
+ - Sort the array in ascending order
+ - Map them to strings in the format “7 is a lucky number”
+ - Print the resulting array, one item per line
+ 
+ */
+
+let luckyNumbers = [7, 4, 38, 21, 16, 15, 12, 33, 31, 49]
+
+let result = luckyNumbers.filter { $0.isMultiple(of: 2) == false }.sorted().map { "\($0) is a lucky number." }
+
+for item in result {
+    print(item)
+}
+
+print("----------------------------------------------------------------")
