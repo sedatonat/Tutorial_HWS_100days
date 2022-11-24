@@ -180,17 +180,15 @@ payment2("sedat")
 print("----------------------------------------------------------------")
 
 var invoice_amount = 20.0
-var total = Double()
+
+// ----------------------------
 
 func VAT_Incl_20_a (sum_wo_vat: Double) -> Double {
     sum_wo_vat * 1.2
 }
 
 VAT_Incl_20_a(sum_wo_vat:invoice_amount)
-//total = (VAT_Incl_20_a) * 2 #learn
-
-
-//print("VAT Incl \(VAT_Incl_20_a(sum_wo_vat: 20))")
+print("VAT Incl \(VAT_Incl_20_a(sum_wo_vat: 20))")
 
 
 print("---")
@@ -200,6 +198,6 @@ let VAT_Incl_20_b = {(sum_wo_vat: Double) in
     print("VAT Incl \((sum_wo_vat)*1.2)")
 }
 
-//VAT_Incl_20_b(invoice_amount)
+VAT_Incl_20_b(invoice_amount)
 
 
