@@ -39,22 +39,37 @@ print(account)
 print("-----------------------------------------------------------------------")
 
 
+
 struct Doctor {
     var name: String
     var location: String
     private var currentPatient = "No one"
+    init(name: String, location: String) {
+        self.name = name
+        self.location = location
+    }
 }
 let drJones = Doctor(name: "Esther Jones", location: "Bristol")
 
-//struct Doctor {
-//    var name: String
-//    var location: String
-//    private var currentPatient = "No one"
-//    init(name: String, location: String) {
-//        self.name = name
-//        self.location = location
-//    }
-//}
-//let drJones = Doctor(name: "Esther Jones", location: "Bristol")
-//
-//print(drJones)
+print(drJones)
+
+
+print("-----------------------------------------------------------------------")
+
+struct NewsStory {
+    static var breakingNewsCount = 0
+    static var regularNewsCount = 0
+    var headline: String
+//    var isBreaking: Bool
+    init(headline: String, isBreaking: Bool) {
+        self.headline = headline
+//        self.isBreaking = isBreaking
+        if isBreaking {
+            NewsStory.breakingNewsCount += 1
+        } else {
+            NewsStory.regularNewsCount += 1
+        }
+    }
+}
+
+print(NewsStory)
