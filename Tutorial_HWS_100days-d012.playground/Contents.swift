@@ -35,3 +35,80 @@ joseph.work()
 
 let novall = Developer(hours: 8)
 novall.printSummary()
+
+
+print("---------------------------------------------------------")
+
+//class User {
+//    var username = "Anonymous"
+//
+//    func copy() -> User {
+//        let user = User()
+//        user.username = username
+//        return user
+//    }
+//
+//}
+//
+//var user1 = User()
+//var user2 = user1.copy()
+//user2.username = "Taylor"
+//var user3 = user2
+//
+//print(user1.username)
+//print(user2.username)
+//print(user3.username)
+
+
+print("---------------------------------------------------------")
+
+class Ewok {
+    var fluffinessPercentage = 100
+}
+var chirpa = Ewok()
+var wicket = chirpa
+chirpa.fluffinessPercentage = 90
+print(wicket.fluffinessPercentage)
+print(chirpa.fluffinessPercentage)
+
+
+print("---------------------------------------------------------")
+
+//class User {
+//    let id: Int
+//
+//    init(id: Int) {
+//        self.id = id
+//        print("User \(id): I'm alive!")
+//    }
+//
+//    deinit {
+//        print("User \(id): I'm dead!")
+//    }
+//
+//}
+//
+//var users = [User]()
+//
+//for i in 1...3 {
+//    let user = User(id: i)
+//    print("User \(user.id): I'm in control!")
+//    users.append(user)
+//}
+//
+//print("Loop is finished!")
+//users.removeAll()
+//print("Array is clear!")
+
+
+print("---------------------------------------------------------")
+
+
+class User {
+    let name = "Sedat"
+}
+
+let user = User()
+user.name = "Veysel"
+user = User()
+print(user.name)
