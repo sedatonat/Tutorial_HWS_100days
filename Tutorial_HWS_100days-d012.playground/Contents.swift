@@ -105,10 +105,42 @@ print("---------------------------------------------------------")
 
 
 class User {
-    let name = "Sedat"
+    var name = "Sedat"
 }
 
-let user = User()
+var user = User()
 user.name = "Veysel"
 user = User()
 print(user.name)
+
+
+print("---------------------------------------------------------")
+
+class Vehicle {
+    let isElectric: Bool
+
+    init(isElectric: Bool) {
+        self.isElectric = isElectric
+    }
+}
+
+class Car: Vehicle {
+    let isConvertible: Bool
+
+    init(isElectric: Bool, isConvertible: Bool) {
+        self.isConvertible = isConvertible
+        super.init(isElectric: isElectric)
+    }
+}
+
+let teslaX = Car(isElectric: true, isConvertible: false)
+
+
+print("---------------------------------------------------------")
+
+// CHECKPOINT 7
+
+
+
+
+
