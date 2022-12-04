@@ -92,8 +92,8 @@ struct Car {
     mutating func changeGear(difference: Int) {
         gear = gear + difference
         
-        if gear < 1 {
-            gear = 1
+        if gear < 0 {
+            gear = 0
         } else if gear > maximumGears {
             gear = maximumGears
         }
@@ -104,4 +104,6 @@ struct Car {
 var car = Car(model: "BMW X3", seats: 5, maximumGears: 8)
 car.changeGear(difference: 1)
 print(car.gear)
+car.changeGear(difference: -5)
+print(car.gear) // Since we have limited the minimum gear to 0, the gear cannot be less than 0
 
