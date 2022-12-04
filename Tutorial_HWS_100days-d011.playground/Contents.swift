@@ -35,3 +35,26 @@ if success {
 
 print(account)
 
+
+print("-----------------------------------------------------------------------")
+
+
+struct Doctor {
+    var name: String
+    var location: String
+    private var currentPatient = "No one"
+}
+let drJones = Doctor(name: "Esther Jones", location: "Bristol")
+
+//struct Doctor {
+//    var name: String
+//    var location: String
+//    private var currentPatient = "No one"
+//    init(name: String, location: String) {
+//        self.name = name
+//        self.location = location
+//    }
+//}
+//let drJones = Doctor(name: "Esther Jones", location: "Bristol")
+//
+//print(drJones)
