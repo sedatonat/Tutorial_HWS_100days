@@ -103,3 +103,24 @@ extension String {
 let trimmed2 = quote.fnc_trimmed2()
 
 print(trimmed2)
+
+
+print("----------------------------------------------------------------")
+
+protocol Person {
+    var name: String { get }
+    func sayHello()
+}
+
+extension Person {
+    func sayHello() {
+        print("Hi, I'm \(name)")
+    }
+}
+
+struct Employee: Person {
+    let name: String
+}
+
+let taylor = Employee(name: "Taylor Swift")
+taylor.sayHello()
