@@ -124,3 +124,45 @@ struct Employee: Person {
 
 let taylor = Employee(name: "Taylor Swift")
 taylor.sayHello()
+
+
+print("----------------------------------------------------------------")
+
+let numbers3 = ["four": 4, "eight": 8, "fifteen": 15, "sixteen": 16]
+let allEven3 = numbers3.allSatisfy { $0.value.isMultiple(of: 2) }
+
+// Nothing understood #learn
+
+print("----------------------------------------------------------------")
+
+// Variant 1
+extension Int {
+    func squared() -> Int {
+        self * self
+    }
+}
+
+// Variant 2
+extension Numeric {
+    func squared() -> Self {
+        self * self
+    }
+}
+
+let wholeNumber = 5
+print(wholeNumber.squared())
+
+
+print("----------------------------------------------------------------")
+
+struct User: Equatable {
+    let name: String
+}
+
+let user1 = User(name: "Link")
+let user2 = User(name: "Zelda")
+print(user1 == user2)
+print(user1 != user2)
+
+
+print("----------------------------------------------------------------")
