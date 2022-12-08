@@ -1,11 +1,17 @@
 import Cocoa
 
 protocol Vehicle {
-    var name: String { get }
-    var currentPassengers: Int { get set }
+    
+    // Properties
+    var name: String { get }  // car, bike, etc.
+    var currentPassengers: Int { get set }  // number passengers in default
+    
+    // Methods
     func estimateTime(for distance: Int) -> Int
     func travel(distance: Int)
+    
 }
+
 
 
 func commute(distance: Int, using vehicle: Vehicle) { // protocol made it possible to use it everywhere, no need to create a new func everytime #lesson
