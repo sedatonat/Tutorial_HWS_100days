@@ -70,3 +70,36 @@ let bike = Bicycle()
 commute(distance: 50, using: bike)
 
 getTravelEstimates(using: [car, bike], distance: 120)
+
+
+print("----------------------------------------------------------------")
+
+func getRandomNumber() -> some Equatable {  // It will be Equitable but some specific kind of
+    Double.random(in: 1...6)  // Here it says the Equatable is Integer, tus it gives us the ability to change our mind later
+}
+
+func getRandomBool() -> some Equatable {
+    Bool.random()
+}
+
+print(getRandomNumber() == getRandomNumber())
+
+
+print("----------------------------------------------------------------")
+
+var quote = "   The truth is rarely pure and never simple   "
+
+//let trimmed1 = quote.trimmingCharacters(in: .whitespacesAndNewlines)
+//
+//print(trimmed1)
+
+
+extension String {
+    func fnc_trimmed2() -> String {
+        self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
+let trimmed2 = quote.fnc_trimmed2()
+
+print(trimmed2)
