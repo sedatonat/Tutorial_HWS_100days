@@ -27,6 +27,11 @@ func square(number: Int) -> Int {
 }
 
 var number: Int? = nil
-print(square(number: number))
+//print(square(number: number))
 
 
+
+print("-------------------------------")
+
+var name: String? = nil
+var age: Int? = nil
