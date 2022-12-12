@@ -39,17 +39,11 @@ var age: Int? = nil
 
 print("-------------------------------")
 
-func printSquare(of number: Int?) {
-    guard let number = number else {
-        print("Missing input")
-        return
-    }
+//func getMeaningOfLife() -> Int? {
+//    
+//}
 
-    print("\(number) x \(number) is \(number * number)")
-}
-
-
-var myVar: Int? = 3
+var myVar: Int?
 
 if let unwrapped = myVar {
     print("Run if myVar has a value inside")
@@ -57,4 +51,5 @@ if let unwrapped = myVar {
 
 guard let unwrapped = myVar else {
     print("Run if myVar doesn't have a value inside")
+    return
 }
