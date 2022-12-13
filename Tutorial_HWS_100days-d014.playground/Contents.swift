@@ -73,3 +73,27 @@ print("-------------------------------")
 
 let names = ["Vincent": "van Gogh", "Pablo": "Picasso", "Claude": "Monet"]
 let surnameLetter = names["Vincent"]?.first?.uppercased() ?? "?"
+
+
+print("-------------------------------")
+
+// CHECKPOINT 9
+
+// Version 1
+//func getNumber(in array: [Int]?) -> Int {
+//    array?.randomElement() ?? Int.random(in: 1...100)
+//}
+
+
+// Version 2
+//func getNumber(in array: [Int?]?) -> Int {
+//    let random = Int.random(in: 1...100)
+//    return (array?.randomElement() ?? random) ?? random
+//}
+
+
+// Version 3
+func getNumber(in array: [Int?]?) -> Int {
+    lazy var random = Int.random(in: 1...100)
+    return (array?.randomElement() ?? random) ?? random
+}
