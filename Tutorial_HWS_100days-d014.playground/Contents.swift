@@ -39,17 +39,37 @@ var age: Int? = nil
 
 print("-------------------------------")
 
-//func getMeaningOfLife() -> Int? {
-//    
-//}
-
-var myVar: Int?
-
-if let unwrapped = myVar {
-    print("Run if myVar has a value inside")
+// Nil-Coalescing
+struct Book {
+    let title: String
+    let author: String?
 }
 
-guard let unwrapped = myVar else {
-    print("Run if myVar doesn't have a value inside")
-    return
-}
+let book = Book(title: "Beowulf", author: nil)
+let author = book.author ?? "Anonymous"
+print(author)
+
+
+print("-------------------------------")
+
+let input = ""
+let number2 = Int(input) ?? 0
+print(number2)
+
+
+print("-------------------------------")
+
+let names1 = ["Arya", "Bran", "Robb", "Sansa"]
+let names2 = [String]()
+
+let chosen1 = names1.randomElement()?.uppercased() ?? "No one"
+print("Next in line: \(chosen1)")
+
+let chosen2 = names2.randomElement()?.uppercased() ?? "No one"
+print("Next in line: \(chosen2)")
+
+
+print("-------------------------------")
+
+let names = ["Vincent": "van Gogh", "Pablo": "Picasso", "Claude": "Monet"]
+let surnameLetter = names["Vincent"]?.first?.uppercased() ?? "?"
