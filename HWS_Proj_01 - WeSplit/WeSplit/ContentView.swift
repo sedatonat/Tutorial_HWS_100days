@@ -14,18 +14,20 @@ struct ContentView: View {
     
     @FocusState private var amountIsFocused: Bool
     
+    let localCurrency: FloatingPointFormatStyle<Double>.Currency = .currency(code: Locale.current.currency?.identifier ?? "USD")
+    
     let tipPercentages = [10, 15, 20, 25, 0]
     
-    var totalPerPerson: Double {
-        let peopleCount = Double(numberOfPeople)
+    var grandTotal: Double {
         let tipSelection = Double(tipPercentage)
-        let tipValue = (checkAmount / 100) * tipSelection
-        let grandTotal = checkAmount + tipValue
-        let amountPerPerson = grandTotal / peopleCount
-        
-        
-        return amountPerPerson
+        let tipValue = checkAmount / 100 * tipSelection
+        return checkAmount + tipValue
     }
+    
+    var totalPerPerson: Double {
+        grandTotal / Double(numberOfPeople)
+    }
+    
     
     var body: some View {
         NavigationView {  // Without it Picker started from 4
@@ -34,7 +36,7 @@ struct ContentView: View {
                     TextField(
                         "Aomunt", // title
                         value: $checkAmount, // value
-                        format: .currency(code: Locale.current.currency?.identifier ?? "USD")
+                        format: localCurrency
                     )
                     .keyboardType(.decimalPad)
                     // as default TextField has "text:" but since the value we put into is not a text we had to change it into "value"
@@ -62,11 +64,23 @@ struct ContentView: View {
                 
                 
                 Section {
+                    Text(grandTotal, format: localCurrency)
+                } header: {
+                    Text("Total amount")
+                }
+
+                
+                
+                Section {
                     Text(
                         totalPerPerson,
                         format: .currency(code: Locale.current.currency?.identifier ?? "USD")
                     )
                 }
+                header: {
+                    Text("Amount per person")
+                }
+                
                 
                 
             }
@@ -82,10 +96,10 @@ struct ContentView: View {
         }
     }
 }
-    
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
+}
