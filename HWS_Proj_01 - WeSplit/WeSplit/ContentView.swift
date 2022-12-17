@@ -73,7 +73,7 @@ struct ContentView: View {
             .navigationTitle("WeSplit")
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
-                    Spacer()
+                    Spacer() // brought Done to the right side
                     Button("Done") {
                         amountIsFocused = false
                     }
