@@ -16,16 +16,26 @@ struct ContentView: View {
     
     var body: some View {
         Form {
+            
             Section {
                 TextField(
                     "Aomunt", // title
                     value: $checkAmount, // value
                     format: .currency(code: Locale.current.currency?.identifier ?? "USD")
                 )
+                .keyboardType(.decimalPad)
                 // as default TextField has "text:" but since the value we put into is not a text we had to change it into "value"
                 // "??" helps if currency is not defined so the default is "USD"
-                
             }
+            
+            Section {
+                Text(
+                    checkAmount,
+                    format: .currency(code: Locale.current.currency?.identifier ?? "USD")
+                )
+            }
+            
+            
         }
     }
 }
