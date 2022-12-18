@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E395555A294EDC1200B790E2 /* Tut_HWS_Chal_01___ConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3955559294EDC1200B790E2 /* Tut_HWS_Chal_01___ConverterApp.swift */; };
-		E395555C294EDC1200B790E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E395555B294EDC1200B790E2 /* ContentView.swift */; };
-		E395555E294EDC1300B790E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E395555D294EDC1300B790E2 /* Assets.xcassets */; };
-		E3955561294EDC1300B790E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3955560294EDC1300B790E2 /* Preview Assets.xcassets */; };
+		E3D99308294EDCF000AE3178 /* Tut_HWS_Chal_01_ConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D99307294EDCF000AE3178 /* Tut_HWS_Chal_01_ConverterApp.swift */; };
+		E3D9930A294EDCF000AE3178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D99309294EDCF000AE3178 /* ContentView.swift */; };
+		E3D9930C294EDCF100AE3178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D9930B294EDCF100AE3178 /* Assets.xcassets */; };
+		E3D9930F294EDCF100AE3178 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D9930E294EDCF100AE3178 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E3955556294EDC1200B790E2 /* Tut_HWS_Chal_01 - Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tut_HWS_Chal_01 - Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3955559294EDC1200B790E2 /* Tut_HWS_Chal_01___ConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tut_HWS_Chal_01___ConverterApp.swift"; sourceTree = "<group>"; };
-		E395555B294EDC1200B790E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E395555D294EDC1300B790E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E3955560294EDC1300B790E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E3D99304294EDCF000AE3178 /* Tut_HWS_Chal_01_Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tut_HWS_Chal_01_Converter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3D99307294EDCF000AE3178 /* Tut_HWS_Chal_01_ConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tut_HWS_Chal_01_ConverterApp.swift; sourceTree = "<group>"; };
+		E3D99309294EDCF000AE3178 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E3D9930B294EDCF100AE3178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3D9930E294EDCF100AE3178 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E3955553294EDC1200B790E2 /* Frameworks */ = {
+		E3D99301294EDCF000AE3178 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,37 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E395554D294EDC1200B790E2 = {
+		E3D992FB294EDCF000AE3178 = {
 			isa = PBXGroup;
 			children = (
-				E3955558294EDC1200B790E2 /* Tut_HWS_Chal_01 - Converter */,
-				E3955557294EDC1200B790E2 /* Products */,
+				E3D99306294EDCF000AE3178 /* Tut_HWS_Chal_01_Converter */,
+				E3D99305294EDCF000AE3178 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E3955557294EDC1200B790E2 /* Products */ = {
+		E3D99305294EDCF000AE3178 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E3955556294EDC1200B790E2 /* Tut_HWS_Chal_01 - Converter.app */,
+				E3D99304294EDCF000AE3178 /* Tut_HWS_Chal_01_Converter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E3955558294EDC1200B790E2 /* Tut_HWS_Chal_01 - Converter */ = {
+		E3D99306294EDCF000AE3178 /* Tut_HWS_Chal_01_Converter */ = {
 			isa = PBXGroup;
 			children = (
-				E3955559294EDC1200B790E2 /* Tut_HWS_Chal_01___ConverterApp.swift */,
-				E395555B294EDC1200B790E2 /* ContentView.swift */,
-				E395555D294EDC1300B790E2 /* Assets.xcassets */,
-				E395555F294EDC1300B790E2 /* Preview Content */,
+				E3D99307294EDCF000AE3178 /* Tut_HWS_Chal_01_ConverterApp.swift */,
+				E3D99309294EDCF000AE3178 /* ContentView.swift */,
+				E3D9930B294EDCF100AE3178 /* Assets.xcassets */,
+				E3D9930D294EDCF100AE3178 /* Preview Content */,
 			);
-			path = "Tut_HWS_Chal_01 - Converter";
+			path = Tut_HWS_Chal_01_Converter;
 			sourceTree = "<group>";
 		};
-		E395555F294EDC1300B790E2 /* Preview Content */ = {
+		E3D9930D294EDCF100AE3178 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				E3955560294EDC1300B790E2 /* Preview Assets.xcassets */,
+				E3D9930E294EDCF100AE3178 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -70,39 +70,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E3955555294EDC1200B790E2 /* Tut_HWS_Chal_01 - Converter */ = {
+		E3D99303294EDCF000AE3178 /* Tut_HWS_Chal_01_Converter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E3955564294EDC1300B790E2 /* Build configuration list for PBXNativeTarget "Tut_HWS_Chal_01 - Converter" */;
+			buildConfigurationList = E3D99312294EDCF100AE3178 /* Build configuration list for PBXNativeTarget "Tut_HWS_Chal_01_Converter" */;
 			buildPhases = (
-				E3955552294EDC1200B790E2 /* Sources */,
-				E3955553294EDC1200B790E2 /* Frameworks */,
-				E3955554294EDC1200B790E2 /* Resources */,
+				E3D99300294EDCF000AE3178 /* Sources */,
+				E3D99301294EDCF000AE3178 /* Frameworks */,
+				E3D99302294EDCF000AE3178 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Tut_HWS_Chal_01 - Converter";
-			productName = "Tut_HWS_Chal_01 - Converter";
-			productReference = E3955556294EDC1200B790E2 /* Tut_HWS_Chal_01 - Converter.app */;
+			name = Tut_HWS_Chal_01_Converter;
+			productName = Tut_HWS_Chal_01_Converter;
+			productReference = E3D99304294EDCF000AE3178 /* Tut_HWS_Chal_01_Converter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E395554E294EDC1200B790E2 /* Project object */ = {
+		E3D992FC294EDCF000AE3178 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					E3955555294EDC1200B790E2 = {
+					E3D99303294EDCF000AE3178 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = E3955551294EDC1200B790E2 /* Build configuration list for PBXProject "Tut_HWS_Chal_01 - Converter" */;
+			buildConfigurationList = E3D992FF294EDCF000AE3178 /* Build configuration list for PBXProject "Tut_HWS_Chal_01_Converter" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = E395554D294EDC1200B790E2;
-			productRefGroup = E3955557294EDC1200B790E2 /* Products */;
+			mainGroup = E3D992FB294EDCF000AE3178;
+			productRefGroup = E3D99305294EDCF000AE3178 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E3955555294EDC1200B790E2 /* Tut_HWS_Chal_01 - Converter */,
+				E3D99303294EDCF000AE3178 /* Tut_HWS_Chal_01_Converter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E3955554294EDC1200B790E2 /* Resources */ = {
+		E3D99302294EDCF000AE3178 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3955561294EDC1300B790E2 /* Preview Assets.xcassets in Resources */,
-				E395555E294EDC1300B790E2 /* Assets.xcassets in Resources */,
+				E3D9930F294EDCF100AE3178 /* Preview Assets.xcassets in Resources */,
+				E3D9930C294EDCF100AE3178 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E3955552294EDC1200B790E2 /* Sources */ = {
+		E3D99300294EDCF000AE3178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E395555C294EDC1200B790E2 /* ContentView.swift in Sources */,
-				E395555A294EDC1200B790E2 /* Tut_HWS_Chal_01___ConverterApp.swift in Sources */,
+				E3D9930A294EDCF000AE3178 /* ContentView.swift in Sources */,
+				E3D99308294EDCF000AE3178 /* Tut_HWS_Chal_01_ConverterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		E3955562294EDC1300B790E2 /* Debug */ = {
+		E3D99310294EDCF100AE3178 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -205,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		E3955563294EDC1300B790E2 /* Release */ = {
+		E3D99311294EDCF100AE3178 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -259,14 +259,14 @@
 			};
 			name = Release;
 		};
-		E3955565294EDC1300B790E2 /* Debug */ = {
+		E3D99313294EDCF100AE3178 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tut_HWS_Chal_01 - Converter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Tut_HWS_Chal_01_Converter/Preview Content\"";
 				DEVELOPMENT_TEAM = AM5TRWBH6U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,7 +280,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.SedatOnat.Tut-HWS-Chal-01---Converter";
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.SedatOnat.Tut-HWS-Chal-01-Converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -288,14 +288,14 @@
 			};
 			name = Debug;
 		};
-		E3955566294EDC1300B790E2 /* Release */ = {
+		E3D99314294EDCF100AE3178 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tut_HWS_Chal_01 - Converter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Tut_HWS_Chal_01_Converter/Preview Content\"";
 				DEVELOPMENT_TEAM = AM5TRWBH6U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -309,7 +309,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.SedatOnat.Tut-HWS-Chal-01---Converter";
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.SedatOnat.Tut-HWS-Chal-01-Converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,25 +320,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E3955551294EDC1200B790E2 /* Build configuration list for PBXProject "Tut_HWS_Chal_01 - Converter" */ = {
+		E3D992FF294EDCF000AE3178 /* Build configuration list for PBXProject "Tut_HWS_Chal_01_Converter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E3955562294EDC1300B790E2 /* Debug */,
-				E3955563294EDC1300B790E2 /* Release */,
+				E3D99310294EDCF100AE3178 /* Debug */,
+				E3D99311294EDCF100AE3178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E3955564294EDC1300B790E2 /* Build configuration list for PBXNativeTarget "Tut_HWS_Chal_01 - Converter" */ = {
+		E3D99312294EDCF100AE3178 /* Build configuration list for PBXNativeTarget "Tut_HWS_Chal_01_Converter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E3955565294EDC1300B790E2 /* Debug */,
-				E3955566294EDC1300B790E2 /* Release */,
+				E3D99313294EDCF100AE3178 /* Debug */,
+				E3D99314294EDCF100AE3178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E395554E294EDC1200B790E2 /* Project object */;
+	rootObject = E3D992FC294EDCF000AE3178 /* Project object */;
 }

@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Tut_HWS_Chal_01 - Converter
+//  Tut_HWS_Chal_01_Converter
 //
 //  Created by Sedat Onat on 18.12.2022.
 //
