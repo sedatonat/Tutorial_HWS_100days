@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Tut_HWS_Chal_01_ConverterApp: App {
+struct ConverterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
