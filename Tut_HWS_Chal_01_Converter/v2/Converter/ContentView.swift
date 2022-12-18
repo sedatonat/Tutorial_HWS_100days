@@ -9,14 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var input = 100.0
-    @State private var inputUnit = UnitLength.meters
-    @State private var outputUnit = UnitLength.kilometers
+    @State private var selectedUnits = 0
+    @State private var inputUnit: Dimension = UnitLength.meters
+    @State private var outputUnit: Dimension = UnitLength.kilometers
     
     @FocusState private var inputIsFocused: Bool
     
     let conversions = ["Distance", "Mass", "Temperature", "Time"]
     
-    let unitTypes [
+    let unitTypes = [
         // Distance
         [UnitLength.feet, UnitLength.kilometers, UnitLength.meters, UnitLength.miles, UnitLength.yards],
         // Mass
@@ -26,6 +27,7 @@ struct ContentView: View {
         // Time
         [UnitDuration.hours, UnitDuration.minutes, UnitDuration.seconds]
     ]
+    
     
     
     let formatter: MeasurementFormatter
@@ -50,15 +52,22 @@ struct ContentView: View {
                 .focused($inputIsFocused) // trigers the state
                 
                 
+                Picker("Conversion", selection: $selectedUnits) {
+                    ForEach(0..<conversions.count) {
+                        Text(conversions[$0])
+                    }
+                }
+                
+                
                 Picker("Convert from", selection: $inputUnit) {
-                    ForEach(units, id: \.self) {
+                    ForEach(unitTypes[selectedUnits], id: \.self) {
                         Text(formatter.string(from:$0).capitalized)
                     }
                 }
                 
                 
                 Picker("Convert to", selection: $outputUnit) {
-                    ForEach(units, id: \.self) {
+                    ForEach(unitTypes[selectedUnits], id: \.self) {
                         Text(formatter.string(from:$0).capitalized)
                     }
                 }
@@ -80,6 +89,11 @@ struct ContentView: View {
                         inputIsFocused = false
                     }
                 }
+            }
+            .onChange(of: selectedUnits) { newSelection in
+                let units = unitTypes[newSelection]
+                inputUnit = units[0]
+                outputUnit = units[1]
             }
         }
     }
