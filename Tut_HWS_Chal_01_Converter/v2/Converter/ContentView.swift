@@ -9,51 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var input = 100.0
-    @State private var inputUnit = "Meters"
-    @State private var outputUnit = "Kilometers"
+    @State private var inputUnit = UnitLength.meters
+    @State private var outputUnit = UnitLength.kilometers
     
     @FocusState private var inputIsFocused: Bool
     
-    let units = ["Feet", "Kilometers", "Meters", "Miles", "Yards"]
+    let conversions = ["Distance", "Mass", "Temperature", "Time"]
+    
+    let unitTypes [
+        // Distance
+        [UnitLength.feet, UnitLength.kilometers, UnitLength.meters, UnitLength.miles, UnitLength.yards],
+        // Mass
+        [UnitMass.grams, UnitMass.kilograms, UnitMass.ounces, UnitMass.pounds],
+        // Temperature
+        [UnitTemperature.celsius, UnitTemperature.fahrenheit, UnitTemperature.kelvin],
+        // Time
+        [UnitDuration.hours, UnitDuration.minutes, UnitDuration.seconds]
+    ]
+    
+    
+    let formatter: MeasurementFormatter
     
     var result: String {
-        let inputToMetersMultiplier: Double
-        let metersToOutputMultiplier: Double
-        // meters are central location. All the coversion will be made over meters
- 
-        switch inputUnit {
-        case "Feet":
-            inputToMetersMultiplier = 0.3048  // Feet to Meter
-        case "Kilometers":
-            inputToMetersMultiplier = 1000  // Kilometer to Meter
-        case "Miles":
-            inputToMetersMultiplier = 1609.34  // Mile to Meter
-        case "Yards":
-            inputToMetersMultiplier = 0.9144  // Yard to Meter
-        default:
-            inputToMetersMultiplier = 1  // default value
+        let inputMeasurement = Measurement(value: input, unit: inputUnit)
+        let outputMeasurement = inputMeasurement.converted(to: outputUnit)
+        return formatter.string(from: outputMeasurement)
     }
-        
-        switch outputUnit {
-        case "Feet":
-            metersToOutputMultiplier = 3.28084  // Meter to Feet
-        case "Kilometers":
-            metersToOutputMultiplier = 0.001  // Meter to Kilometer
-        case "Miles":
-            metersToOutputMultiplier = 0.000621371  // Meter to Mile
-        case "Yards":
-            metersToOutputMultiplier = 1.09361  // Meter to Yard
-        default:
-            metersToOutputMultiplier = 1  // default value
-    }
-
-        let inputInMeters = input * inputToMetersMultiplier
-        let output = inputInMeters * metersToOutputMultiplier
-        
-        let outputString = output.formatted()
-        return "\(outputString) \(outputUnit.lowercased())"
-
-}
     
     
     var body: some View {
@@ -71,14 +52,14 @@ struct ContentView: View {
                 
                 Picker("Convert from", selection: $inputUnit) {
                     ForEach(units, id: \.self) {
-                        Text($0)
+                        Text(formatter.string(from:$0).capitalized)
                     }
                 }
                 
                 
                 Picker("Convert to", selection: $outputUnit) {
                     ForEach(units, id: \.self) {
-                        Text($0)
+                        Text(formatter.string(from:$0).capitalized)
                     }
                 }
                 
@@ -101,6 +82,11 @@ struct ContentView: View {
                 }
             }
         }
+    }
+    init() {
+        formatter = MeasurementFormatter()
+        formatter.unitOptions = .providedUnit
+        formatter.unitStyle = .long
     }
 }
 
