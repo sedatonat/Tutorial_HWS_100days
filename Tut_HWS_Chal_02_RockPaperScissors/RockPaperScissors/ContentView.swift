@@ -13,6 +13,10 @@ struct ContentView: View {
     @State private var computerChoice = Int.random(in: 0..<3)
     @State private var shouldWin = Bool.random()
     
+    @State private var score = 0
+    @State private var questionCount = 1
+    @State private var showingResults = false
+    
     var body: some View {
         VStack {
             Spacer()
@@ -35,7 +39,7 @@ struct ContentView: View {
             HStack {
                 ForEach(0..<3) { number in
                     Button(moves[number]) {
-                        
+                        play(choice: number)
                     }
                     .font(.system(size: 80))
                 }
@@ -43,9 +47,19 @@ struct ContentView: View {
             
             Spacer()
             
-            Text("Score ???")
+            Text("Score \(score)")
                 .font(.subheadline)
+        
+            Spacer()
         }
+        
+        .alert("Game over", isPresented: $showingResults) {
+            Button("Play Again", action: reset)
+        } message: {
+            Text("You score was \(score)")
+        }
+        
+        
     }
     
     func play(choice: Int) {
@@ -58,7 +72,28 @@ struct ContentView: View {
             didWin = winningMoves[choice] == computerChoice
         }
         
+        if didWin {
+            score += 1
+        } else {
+            score -= 1
+        }
         
+        
+        if questionCount == 10 {
+            showingResults = true
+        } else {
+            computerChoice = Int.random(in: 0..<3)
+            shouldWin.toggle()
+            questionCount += 1
+        }
+        
+    }
+    
+    func reset() {
+        computerChoice = Int.random(in: 0..<3)
+        shouldWin = Bool.random()
+        questionCount = 0
+        score = 0
     }
     
 }
