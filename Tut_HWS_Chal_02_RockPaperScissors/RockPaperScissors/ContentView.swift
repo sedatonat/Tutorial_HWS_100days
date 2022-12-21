@@ -37,15 +37,30 @@ struct ContentView: View {
                     Button(moves[number]) {
                         
                     }
-                    .font(.system(.size: 80))
-                    
+                    .font(.system(size: 80))
                 }
-                
-                
-                
             }
+            
+            Spacer()
+            
+            Text("Score ???")
+                .font(.subheadline)
         }
     }
+    
+    func play(choice: Int) {
+        let winningMoves = [1, 2, 0]
+        let didWin: Bool
+        
+        if shouldWin {
+            didWin = choice == winningMoves[computerChoice]
+        } else {
+            didWin = winningMoves[choice] == computerChoice
+        }
+        
+        
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
