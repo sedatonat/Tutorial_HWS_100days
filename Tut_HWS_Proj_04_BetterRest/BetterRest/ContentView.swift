@@ -9,7 +9,7 @@ import CoreML
 import SwiftUI
 
 struct ContentView: View {
-    @State private var wakeUp = Date.now
+    @State private var wakeUp = defaultWakeTime
     @State private var sleepAmount = 8.0
     @State private var cofeeeAmount = 1
     
@@ -17,36 +17,51 @@ struct ContentView: View {
     @State private var alertMessage = ""
     @State private var showingAlert = false
     
+    // reading a property from another property will cinfuse Swift becuase it cannot know the priority of it. Statis helps us in this
+    
+    static var defaultWakeTime: Date {
+        var components = DateComponents()
+        components.hour = 7
+        components.minute = 0
+        return Calendar.current.date(from: components) ?? Date.now
+    }
+    
     var body: some View {
         NavigationView {
-            VStack {
-                Text("When do you want to wake up?")
-                    .font(.headline)
+            Form {
                 
-                DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
-                    .labelsHidden()  // Hides the label
+                VStack(alignment: .leading, spacing:0) {
+                    Text("When do you want to wake up?")
+                        .font(.headline)
+                    
+                    DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
+                        .labelsHidden()  // Hides the label
+                }
                 
-                Text("Desired amount of sleep")
-                    .font(.headline)
+                VStack(alignment: .leading, spacing:0) {
+                    Text("Desired amount of sleep")
+                        .font(.headline)
+                    Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                }
                 
-                Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                VStack(alignment: .leading, spacing:0) {
+                    Text("Daily cofee intake")
+                        .font(.headline)
+                    
+                    Stepper(cofeeeAmount == 1 ? "1 cup" : "\(cofeeeAmount) cups", value: $cofeeeAmount, in: 1...20)
+                }
                 
-                Text("Daily cofee intake")
-                    .font(.headline)
-                
-                Stepper(cofeeeAmount == 1 ? "1 cup" : "\(cofeeeAmount) cups", value: $cofeeeAmount, in: 1...20)
+                .navigationTitle("BetterRest")
+                .toolbar {
+                    Button("Calculate", action: calculateBedTime)
+                }
+                .alert(alertTitle, isPresented: $showingAlert) {
+                    Button("OK") { } // no action, just dismiss
+                } message: {
+                    Text(alertMessage)
+                }
                 
             }
-            .navigationTitle("BetterRest")
-            .toolbar {
-                Button("Calculate", action: calculateBedTime)
-            }
-            .alert(alertTitle, isPresented: $showingAlert) {
-                Button("OK") { } // no action, just dismiss
-            } message: {
-                Text(alertMessage)
-            }
-            
         }
     }
     
@@ -75,6 +90,7 @@ struct ContentView: View {
     }
     
 }
+
 
 
 struct ContentView_Previews: PreviewProvider {
