@@ -30,37 +30,46 @@ struct ContentView: View {
         NavigationView {
             Form {
                 
-                VStack(alignment: .leading, spacing:0) {
-                    Text("When do you want to wake up?")
-                        .font(.headline)
-                    
+                Section("When do you want to wake up?") {
                     DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
                         .labelsHidden()  // Hides the label
                 }
                 
-                VStack(alignment: .leading, spacing:0) {
-                    Text("Desired amount of sleep")
-                        .font(.headline)
+                Section {
                     Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                } header: {
+                    Text("Desired amount of sleep")
+//                        .font(.headline)
                 }
                 
-                VStack(alignment: .leading, spacing:0) {
-                    Text("Daily cofee intake")
-                        .font(.headline)
-                    
-                    Stepper(cofeeeAmount == 1 ? "1 cup" : "\(cofeeeAmount) cups", value: $cofeeeAmount, in: 1...20)
+                
+//                Section {
+//                    Stepper(cofeeeAmount == 1 ? "1 cup" : "\(cofeeeAmount) cups", value: $cofeeeAmount, in: 1...20)
+//                } header: {
+//                    Text("Daily cofee intake")
+//                        .font(.headline)
+//                }
+                
+                
+                Section("Daily cofee intake") {
+                    Picker("Number of cups", selection: $cofeeeAmount) {
+                        ForEach(1..<21) {
+                            Text(String($0))
+                        }
+                    }
                 }
                 
                 .navigationTitle("BetterRest")
-                .toolbar {
-                    Button("Calculate", action: calculateBedTime)
-                }
+               
                 .alert(alertTitle, isPresented: $showingAlert) {
                     Button("OK") { } // no action, just dismiss
                 } message: {
                     Text(alertMessage)
                 }
                 
+            }
+            .toolbar {
+                Button("Calculate", action: calculateBedTime)
             }
         }
     }
