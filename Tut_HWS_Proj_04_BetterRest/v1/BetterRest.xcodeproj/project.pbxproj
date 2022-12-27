@@ -11,7 +11,7 @@
 		E339D2F82954D85500B46066 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E339D2F72954D85500B46066 /* ContentView.swift */; };
 		E339D2FA2954D85600B46066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E339D2F92954D85600B46066 /* Assets.xcassets */; };
 		E339D2FD2954D85600B46066 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E339D2FC2954D85600B46066 /* Preview Assets.xcassets */; };
-		E3684993295A7CE000BF3F7B /* SleepCalculator.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = E3684992295A7CE000BF3F7B /* SleepCalculator.mlpackage */; };
+		E3414B062957ED9F008F6E84 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E3414B052957ED9F008F6E84 /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,7 @@
 		E339D2F72954D85500B46066 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E339D2F92954D85600B46066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E339D2FC2954D85600B46066 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E3684992295A7CE000BF3F7B /* SleepCalculator.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; name = SleepCalculator.mlpackage; path = Docs/SleepCalculator.mlpackage; sourceTree = SOURCE_ROOT; };
+		E3414B052957ED9F008F6E84 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SleepCalculator.mlmodel; path = Docs/SleepCalculator.mlmodel; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 		E339D2F42954D85500B46066 /* BetterRest */ = {
 			isa = PBXGroup;
 			children = (
-				E3684992295A7CE000BF3F7B /* SleepCalculator.mlpackage */,
+				E3414B052957ED9F008F6E84 /* SleepCalculator.mlmodel */,
 				E339D2F52954D85500B46066 /* BetterRestApp.swift */,
 				E339D2F72954D85500B46066 /* ContentView.swift */,
 				E339D2F92954D85600B46066 /* Assets.xcassets */,
@@ -140,9 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3414B062957ED9F008F6E84 /* SleepCalculator.mlmodel in Sources */,
 				E339D2F82954D85500B46066 /* ContentView.swift in Sources */,
 				E339D2F62954D85500B46066 /* BetterRestApp.swift in Sources */,
-				E3684993295A7CE000BF3F7B /* SleepCalculator.mlpackage in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +274,6 @@
 				DEVELOPMENT_TEAM = AM5TRWBH6U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Better Rest v2";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,7 +303,6 @@
 				DEVELOPMENT_TEAM = AM5TRWBH6U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Better Rest v2";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
