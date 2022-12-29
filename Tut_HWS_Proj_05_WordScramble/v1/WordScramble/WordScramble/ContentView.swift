@@ -16,6 +16,9 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var score = 0
+    
+    
     var body: some View {
         NavigationView {
             List {
@@ -46,6 +49,16 @@ struct ContentView: View {
             .toolbar {
                 Button("New Game", action: startGame)
             }
+//            Text("Score \(score)")  // why we can't ad here #learn
+            .safeAreaInset(edge: .bottom) {
+                Text("Score \(score)")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .font(.title)
+            } // Thus it does not move with the screen
+            
             
         } // end of NavigationView
         
@@ -89,13 +102,15 @@ struct ContentView: View {
         
         
         newWord = ""
+        score += answer.count // the longest word the more score
         
     }
     
     func startGame() {
         
-        // when start to a new game old entries should be cleared
+        // when start to a new game old entries and score should be cleared
         newWord = ""
+        score = 0
         usedWords.removeAll()
         
         
