@@ -33,7 +33,8 @@ struct ContentView: View {
                         
                     }
                 }
-            }
+            } // end of List
+            
             .navigationTitle(rootWord)
             .onSubmit(addNewWord)
             .onAppear(perform: startGame)
@@ -42,12 +43,30 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
-        }
-    }
+            .toolbar {
+                Button("New Game", action: startGame)
+            }
+            
+        } // end of NavigationView
+        
+
+        
+    } // end of View
+        
+    
     
     func addNewWord () {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
-        guard answer.count > 0 else {return }
+        
+        guard answer.count > 3 else {
+            wordError(title: "Word is too short", message: "Words must be at least four letters long.")
+            return
+        }
+        
+        guard answer != rootWord else {
+            wordError(title: "Nice try...", message: "You can't use yor starting word!")
+            return
+        }
         
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original!")
@@ -55,7 +74,7 @@ struct ContentView: View {
         }
         
         guard isPossible(word: answer) else {
-            wordError(title: "Word not possibe", message: "You can't spell that word from '\(rootWord)'!")
+            wordError(title: "Word not possible", message: "You can't spell that word from '\(rootWord)'!")
             return
         }
         
@@ -74,6 +93,12 @@ struct ContentView: View {
     }
     
     func startGame() {
+        
+        // when start to a new game old entries should be cleared
+        newWord = ""
+        usedWords.removeAll()
+        
+        
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 let allWords = startWords.components(separatedBy: "\n")
@@ -85,33 +110,29 @@ struct ContentView: View {
         
     }
     
+    
     func isOriginal(word: String) -> Bool {
         !usedWords.contains(word)
     }
     
+    
     func isPossible(word: String) -> Bool {
         var tempWord = rootWord
-        
         for letter in word {
             if let pos = tempWord.firstIndex(of: letter) {
                 tempWord.remove(at: pos)
             } else {
                 return false
             }
-            
         }
-        
      return true
     }
-    
-    
     
     
     func isReal(word: String) -> Bool {
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-        
         return misspelledRange.location == NSNotFound
     }
     
