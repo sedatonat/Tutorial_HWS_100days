@@ -7,22 +7,38 @@
 
 import SwiftUI
 
-struct User {
-    var firstName = "Bilbo"
-    var lastName = "Bagging"
-}
 
 struct ContentView: View {
-    @State private var user = User()  // Connects to User struct
+    @StateObject var expenses = Expenses()  // watch expenses for any change
+    @State private var showingAddExpense = false
     
     var body: some View {
-        VStack {
-            Text("Your name is \(user.firstName) \(user.lastName)")
+        NavigationView {
+            List {
+                ForEach(expenses.items, id: \.name) { item in
+                    Text(item.name)
+                }  // Enf of ForEach
+                .onDelete(perform: removeItems)
+                
+            } // End of List
+            .navigationTitle("iExpense")
+            .toolbar {
+                
+                Button {
+                    showingAddExpense = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+                
+            }
+            .sheet(isPresented: $showingAddExpense) {
+                AddView(expenses: expenses)
+            }
             
-            TextField("First name", text: $user.firstName)
-            TextField("Last name", text: $user.lastName)
         }
-        
+    }  // End of View
+    func removeItems(at offsets: IndexSet) {
+        expenses.items.remove(atOffsets: offsets)
     }
 }
 
