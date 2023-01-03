@@ -18,6 +18,15 @@ class Expenses: ObservableObject {
         }
     }  // End of @Published
     
+    var personalItems: [ExpenseItem] {
+        items.filter {$0.type == "Personal"}
+    }
+    
+    var businessItems: [ExpenseItem] {
+        items.filter {$0.type == "Business}
+    }
+
+    
     init() {
         if let savedItems = UserDefaults.standard.data(forKey: "Items") {
             if let decodedItems = try? JSONDecoder().decode([ExpenseItem].self, from: savedItems) {  // if we cannot read the first if
