@@ -23,7 +23,7 @@ class Expenses: ObservableObject {
     }
     
     var businessItems: [ExpenseItem] {
-        items.filter {$0.type == "Business}
+        items.filter {$0.type == "Business"}
     }
 
     

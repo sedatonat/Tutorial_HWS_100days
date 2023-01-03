@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E3362AB72964983E00F42C6A /* FormatStyle-LocalCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3362AB62964983E00F42C6A /* FormatStyle-LocalCurrency.swift */; };
 		E3362AB929649A7100F42C6A /* View-ExpenseStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3362AB829649A7100F42C6A /* View-ExpenseStyling.swift */; };
+		E3362ABB2964AA1E00F42C6A /* ExpenseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3362ABA2964AA1E00F42C6A /* ExpenseSection.swift */; };
 		E34929362961EC940073F6AD /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34929352961EC940073F6AD /* ExpenseItem.swift */; };
 		E34929382961ECFE0073F6AD /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34929372961ECFE0073F6AD /* Expenses.swift */; };
 		E349293A296200070073F6AD /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3492939296200070073F6AD /* AddView.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		E3362AB62964983E00F42C6A /* FormatStyle-LocalCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormatStyle-LocalCurrency.swift"; sourceTree = "<group>"; };
 		E3362AB829649A7100F42C6A /* View-ExpenseStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-ExpenseStyling.swift"; sourceTree = "<group>"; };
+		E3362ABA2964AA1E00F42C6A /* ExpenseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSection.swift; sourceTree = "<group>"; };
 		E34929352961EC940073F6AD /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		E34929372961ECFE0073F6AD /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		E3492939296200070073F6AD /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				E3EABDC22961A7880021106E /* iExpenseApp.swift */,
 				E3EABDC42961A7880021106E /* ContentView.swift */,
+				E3362ABA2964AA1E00F42C6A /* ExpenseSection.swift */,
 				E3362AB62964983E00F42C6A /* FormatStyle-LocalCurrency.swift */,
 				E3362AB829649A7100F42C6A /* View-ExpenseStyling.swift */,
 				E3492939296200070073F6AD /* AddView.swift */,
@@ -156,6 +159,7 @@
 				E3EABDC52961A7880021106E /* ContentView.swift in Sources */,
 				E349293A296200070073F6AD /* AddView.swift in Sources */,
 				E3362AB929649A7100F42C6A /* View-ExpenseStyling.swift in Sources */,
+				E3362ABB2964AA1E00F42C6A /* ExpenseSection.swift in Sources */,
 				E3362AB72964983E00F42C6A /* FormatStyle-LocalCurrency.swift in Sources */,
 				E34929362961EC940073F6AD /* ExpenseItem.swift in Sources */,
 				E3EABDC32961A7880021106E /* iExpenseApp.swift in Sources */,

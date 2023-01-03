@@ -15,24 +15,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(expenses.items, id: \.name) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
-                        }  // End of VStack
-                        
-                        Spacer()
-                        
-                        Text(item.amount, format: .localCurrency)
-                            .style(for: item)
-                        
-                    }
-                    
-                    
-                }  // Enf of ForEach
-                .onDelete(perform: removeItems)
+                ExpenseSection(title: "Business", expenses: expenses.businessItems, deleteItems: removeBusinessItems)
+                
+                ExpenseSection(title: "Personal", expenses: expenses.personalItems, deleteItems: removePersonalItems)
                 
             } // End of List
             .navigationTitle("iExpense")
@@ -51,9 +36,28 @@ struct ContentView: View {
             
         }
     }  // End of View
-    func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
+    func removeItems(at offsets: IndexSet, in inputArray: [ExpenseItem]) {
+        var objectsToDelete = IndexSet()
+        
+        for offset in offsets {
+            let item = inputArray[offset]
+            
+            if let index = expenses.items.firstIndex(of: item) {
+                objectsToDelete.insert(index)
+            }
+        }
+        
+        expenses.items.remove(atOffsets: objectsToDelete)
     }
+    
+    func removePersonalItems(at offsets: IndexSet) {
+        removeItems(at: offsets, in: expenses.personalItems)
+    }
+    
+    func removeBusinessItems(at offsets: IndexSet) {
+        removeItems(at: offsets, in: expenses.businessItems)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
