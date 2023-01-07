@@ -11,7 +11,8 @@ struct ContentView: View {
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     let missions: [Mission] = Bundle.main.decode("missions.json")
     
-    @State private var showingGrig = true
+    // to make the app remember the setting, we changed @State to @AppStorage
+    @AppStorage("showingGrid") private var showingGrig = true
     
     
     var body: some View {
