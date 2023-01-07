@@ -20,6 +20,8 @@
 		51ED290B273AAFE300001EAD /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED290A273AAFE300001EAD /* Color-Theme.swift */; };
 		51ED290F273AB47700001EAD /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED290E273AB47700001EAD /* MissionView.swift */; };
 		E31CE3FB2968FF0300DFC6D0 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31CE3FA2968FF0300DFC6D0 /* CustomDivider.swift */; };
+		E31CE4012969085700DFC6D0 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31CE4002969085700DFC6D0 /* GridLayout.swift */; };
+		E31CE403296909D200DFC6D0 /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31CE402296909D200DFC6D0 /* ListLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		51ED290A273AAFE300001EAD /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		51ED290E273AB47700001EAD /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		E31CE3FA2968FF0300DFC6D0 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
+		E31CE4002969085700DFC6D0 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		E31CE402296909D200DFC6D0 /* ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 			children = (
 				51ED28EE273AA48D00001EAD /* MoonshotApp.swift */,
 				51ED28F0273AA48D00001EAD /* ContentView.swift */,
+				E31CE402296909D200DFC6D0 /* ListLayout.swift */,
+				E31CE4002969085700DFC6D0 /* GridLayout.swift */,
 				51ED290E273AB47700001EAD /* MissionView.swift */,
 				E31CE3FA2968FF0300DFC6D0 /* CustomDivider.swift */,
 				518F09E3273ABFBE006DBCEC /* AstronautView.swift */,
@@ -173,6 +179,8 @@
 				51ED28F1273AA48D00001EAD /* ContentView.swift in Sources */,
 				51ED28EF273AA48D00001EAD /* MoonshotApp.swift in Sources */,
 				51ED2909273AA8C300001EAD /* Mission.swift in Sources */,
+				E31CE4012969085700DFC6D0 /* GridLayout.swift in Sources */,
+				E31CE403296909D200DFC6D0 /* ListLayout.swift in Sources */,
 				51ED2907273AA70000001EAD /* Bundle-Decodable.swift in Sources */,
 				E31CE3FB2968FF0300DFC6D0 /* CustomDivider.swift in Sources */,
 			);
