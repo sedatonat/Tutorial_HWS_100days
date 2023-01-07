@@ -19,6 +19,7 @@
 		51ED2909273AA8C300001EAD /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED2908273AA8C300001EAD /* Mission.swift */; };
 		51ED290B273AAFE300001EAD /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED290A273AAFE300001EAD /* Color-Theme.swift */; };
 		51ED290F273AB47700001EAD /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED290E273AB47700001EAD /* MissionView.swift */; };
+		E31CE3FB2968FF0300DFC6D0 /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31CE3FA2968FF0300DFC6D0 /* CustomDivider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		51ED2908273AA8C300001EAD /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		51ED290A273AAFE300001EAD /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		51ED290E273AB47700001EAD /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		E31CE3FA2968FF0300DFC6D0 /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				51ED28EE273AA48D00001EAD /* MoonshotApp.swift */,
 				51ED28F0273AA48D00001EAD /* ContentView.swift */,
 				51ED290E273AB47700001EAD /* MissionView.swift */,
+				E31CE3FA2968FF0300DFC6D0 /* CustomDivider.swift */,
 				518F09E3273ABFBE006DBCEC /* AstronautView.swift */,
 				51ED290A273AAFE300001EAD /* Color-Theme.swift */,
 				51ED2904273AA6A800001EAD /* Astronaut.swift */,
@@ -171,6 +174,7 @@
 				51ED28EF273AA48D00001EAD /* MoonshotApp.swift in Sources */,
 				51ED2909273AA8C300001EAD /* Mission.swift in Sources */,
 				51ED2907273AA70000001EAD /* Bundle-Decodable.swift in Sources */,
+				E31CE3FB2968FF0300DFC6D0 /* CustomDivider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

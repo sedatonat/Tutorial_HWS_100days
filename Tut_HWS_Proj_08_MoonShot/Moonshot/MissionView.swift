@@ -24,24 +24,24 @@ struct MissionView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.6)
-                        .padding(.top)
+                        .padding(.vertical)
 
+                    if let date = mission.launchDate {
+                        Label(date.formatted(date: .complete, time: .omitted), systemImage: "calendar")
+                    }
+                    
+                    
                     VStack(alignment: .leading) {
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightBackground)
-                            .padding(.vertical)
+                        CustomDivider()
 
+                        
                         Text("Mission Highlights")
                             .font(.title.bold())
                             .padding(.bottom, 5)
 
                         Text(mission.description)
 
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightBackground)
-                            .padding(.vertical)
+                        CustomDivider()
 
                         Text("Crew")
                             .font(.title.bold())
@@ -64,6 +64,7 @@ struct MissionView: View {
                                                 Capsule()
                                                     .strokeBorder(.white, lineWidth: 1)
                                             )
+                                        
 
                                         VStack(alignment: .leading) {
                                             Text(crewMember.astronaut.name)
@@ -79,6 +80,7 @@ struct MissionView: View {
                             }
                         }
                     }
+                    
                 }
                 .padding(.bottom)
             }
@@ -99,6 +101,7 @@ struct MissionView: View {
             }
         }
     }
+    
 }
 
 struct MissionView_Previews: PreviewProvider {
