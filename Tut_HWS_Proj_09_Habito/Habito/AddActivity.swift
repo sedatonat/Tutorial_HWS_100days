@@ -47,10 +47,10 @@ struct AddActivity: View {
             }
         }
     }
-}
+
 
 struct AddActivity_Previews: PreviewProvider {
     static var previews: some View {
-        AddActivity()
+        AddActivity(data: Activities())
     }
 }
