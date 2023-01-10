@@ -10,6 +10,7 @@
 		E38F2391296B495900E0AA0A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F2390296B495900E0AA0A /* Activity.swift */; };
 		E38F2393296B4A1F00E0AA0A /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F2392296B4A1F00E0AA0A /* Activities.swift */; };
 		E38F2395296C811400E0AA0A /* AddActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F2394296C811400E0AA0A /* AddActivity.swift */; };
+		E38F2397296C917500E0AA0A /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F2396296C917500E0AA0A /* ActivityView.swift */; };
 		E3BFC6E9296B48080052CB05 /* HabitoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFC6E8296B48080052CB05 /* HabitoApp.swift */; };
 		E3BFC6EB296B48080052CB05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFC6EA296B48080052CB05 /* ContentView.swift */; };
 		E3BFC6ED296B48090052CB05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BFC6EC296B48090052CB05 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		E38F2390296B495900E0AA0A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		E38F2392296B4A1F00E0AA0A /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		E38F2394296C811400E0AA0A /* AddActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivity.swift; sourceTree = "<group>"; };
+		E38F2396296C917500E0AA0A /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		E3BFC6E5296B48080052CB05 /* Habito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3BFC6E8296B48080052CB05 /* HabitoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitoApp.swift; sourceTree = "<group>"; };
 		E3BFC6EA296B48080052CB05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			children = (
 				E3BFC6E8296B48080052CB05 /* HabitoApp.swift */,
 				E3BFC6EA296B48080052CB05 /* ContentView.swift */,
+				E38F2396296C917500E0AA0A /* ActivityView.swift */,
 				E38F2390296B495900E0AA0A /* Activity.swift */,
 				E38F2394296C811400E0AA0A /* AddActivity.swift */,
 				E38F2392296B4A1F00E0AA0A /* Activities.swift */,
@@ -151,6 +154,7 @@
 				E38F2395296C811400E0AA0A /* AddActivity.swift in Sources */,
 				E3BFC6EB296B48080052CB05 /* ContentView.swift in Sources */,
 				E3BFC6E9296B48080052CB05 /* HabitoApp.swift in Sources */,
+				E38F2397296C917500E0AA0A /* ActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

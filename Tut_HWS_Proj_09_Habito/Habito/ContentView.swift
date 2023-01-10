@@ -15,7 +15,7 @@ struct ContentView: View {
         NavigationView {
             List(data.activities) {activity in
                 NavigationLink {
-                    Text("Detail view")
+                    ActivityView(data: data, activity: activity)
                 } label: {
                     HStack {
                         Text(activity.title)
@@ -24,7 +24,8 @@ struct ContentView: View {
                             .font(.caption.weight(.black))
                             .padding(5)
                             .frame(minWidth: 50)
-                        
+                            .background(color(for: activity))
+                            .clipShape(Capsule())
                     }
                 }
             }  // End of List
