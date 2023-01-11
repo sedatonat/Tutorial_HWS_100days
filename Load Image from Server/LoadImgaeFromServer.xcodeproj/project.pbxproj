@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3581B55296E4E33006D21D3 /* Test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3581B54296E4E33006D21D3 /* Test1.swift */; };
 		E3E14BB7296E46D200916126 /* LoadImgaeFromServerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E14BB6296E46D200916126 /* LoadImgaeFromServerApp.swift */; };
 		E3E14BB9296E46D200916126 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E14BB8296E46D200916126 /* ContentView.swift */; };
 		E3E14BBB296E46D300916126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E14BBA296E46D300916126 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E3581B54296E4E33006D21D3 /* Test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test1.swift; sourceTree = "<group>"; };
 		E3E14BB3296E46D200916126 /* LoadImgaeFromServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadImgaeFromServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E14BB6296E46D200916126 /* LoadImgaeFromServerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImgaeFromServerApp.swift; sourceTree = "<group>"; };
 		E3E14BB8296E46D200916126 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				E3E14BB6296E46D200916126 /* LoadImgaeFromServerApp.swift */,
 				E3E14BB8296E46D200916126 /* ContentView.swift */,
+				E3581B54296E4E33006D21D3 /* Test1.swift */,
 				E3E14BBA296E46D300916126 /* Assets.xcassets */,
 				E3E14BBC296E46D300916126 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3581B55296E4E33006D21D3 /* Test1.swift in Sources */,
 				E3E14BB9296E46D200916126 /* ContentView.swift in Sources */,
 				E3E14BB7296E46D200916126 /* LoadImgaeFromServerApp.swift in Sources */,
 			);
