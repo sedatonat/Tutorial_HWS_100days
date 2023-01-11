@@ -18,7 +18,7 @@ class Order: ObservableObject, Codable {
     @Published var quantity = 3
 
     @Published var specialRequestEnabled = false {
-        didSet {
+        didSet {  // if special Request Disabled, turn off both toggles
             if specialRequestEnabled == false {
                 extraFrosting = false
                 addSprinkles = false

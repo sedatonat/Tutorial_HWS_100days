@@ -15,15 +15,15 @@ struct ContentView: View {
             Form {
                 Section {
                     Picker("Select your cake type", selection: $order.type) {
-                        ForEach(Order.types.indices) {
-                            Text(Order.types[$0])
+                        ForEach(Order.types.indices) {  // read from array in indis order
+                            Text(Order.types[$0])  // index passed here
                         }
                     }
 
                     Stepper("Number of cakes: \(order.quantity)", value: $order.quantity, in: 3...20)
                 }
 
-                Section {
+                Section {  // Toggle in toggle with sliding openning (.animation)
                     Toggle("Any special requests?", isOn: $order.specialRequestEnabled.animation())
 
                     if order.specialRequestEnabled {
