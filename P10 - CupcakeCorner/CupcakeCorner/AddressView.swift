@@ -26,7 +26,7 @@ struct AddressView: View {
                     Text("Check out")
                 }
             }
-            .disabled(order.hasValidAddress == false)
+            .disabled(order.hasValidAddress == false)  // Imports the rule from Order and checks whether all the address fields ara filled
         }
         .navigationTitle("Delivery details")
         .navigationBarTitleDisplayMode(.inline)
