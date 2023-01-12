@@ -12,6 +12,9 @@ struct CheckoutView: View {
 
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
+    
+    @State private var errorMessage = ""
+    @State private var showingError = false
 
     var body: some View {
         ScrollView {
@@ -38,11 +41,19 @@ struct CheckoutView: View {
         }
         .navigationTitle("Check out")
         .navigationBarTitleDisplayMode(.inline)
+        
         .alert("Thank you!", isPresented: $showingConfirmation) {
             Button("OK") { }
         } message: {
             Text(confirmationMessage)
         }
+        
+        .alert("Ooops!", isPresented: $showingError) {
+            Button("OK") { }
+        } message: {
+            Text(errorMessage)
+        }
+        
     }
 
     func placeOrder() async {
@@ -54,7 +65,7 @@ struct CheckoutView: View {
         let url = URL(string: "https://reqres.in/api/cupcakes")!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
+        // request.httpMethod = "POST"
 
         do {
             let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
@@ -63,7 +74,8 @@ struct CheckoutView: View {
             confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
             showingConfirmation = true
         } catch {
-            print("Checkout failed.")
+            errorMessage = "Sorry, checkout failed. \n\nMessage: \(error.localizedDescription)"
+            showingError = true
         }
     }
 }
