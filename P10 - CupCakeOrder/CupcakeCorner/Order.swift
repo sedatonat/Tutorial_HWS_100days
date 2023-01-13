@@ -18,7 +18,7 @@ class Order: ObservableObject, Codable {
     @Published var quantity = 3
 
     @Published var specialRequestEnabled = false {
-        didSet {  // if special Request Disabled, turn off both toggles
+        didSet {
             if specialRequestEnabled == false {
                 extraFrosting = false
                 addSprinkles = false
@@ -35,7 +35,7 @@ class Order: ObservableObject, Codable {
     @Published var zip = ""
 
     var hasValidAddress: Bool {
-        if name.isReallyEmpty || streetAddress.isReallyEmpty || city.isReallyEmpty || zip.isReallyEmpty {
+        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
             return false
         }
 

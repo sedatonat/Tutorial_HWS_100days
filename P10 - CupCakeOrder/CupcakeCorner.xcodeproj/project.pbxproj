@@ -14,7 +14,6 @@
 		51D8024C2745AC3100306F5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8024B2745AC3100306F5D /* ContentView.swift */; };
 		51D8024E2745AC3300306F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51D8024D2745AC3300306F5D /* Assets.xcassets */; };
 		51D802512745AC3300306F5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51D802502745AC3300306F5D /* Preview Assets.xcassets */; };
-		E3E57AD2297080770074DD72 /* Swift-EmptyChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E57AD1297080770074DD72 /* Swift-EmptyChecking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +25,6 @@
 		51D8024B2745AC3100306F5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		51D8024D2745AC3300306F5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51D802502745AC3300306F5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E3E57AD1297080770074DD72 /* Swift-EmptyChecking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift-EmptyChecking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +61,6 @@
 				51D8024B2745AC3100306F5D /* ContentView.swift */,
 				515D1AEB274706C90026DB34 /* CheckoutView.swift */,
 				515D1AE9274704BB0026DB34 /* AddressView.swift */,
-				E3E57AD1297080770074DD72 /* Swift-EmptyChecking.swift */,
 				515D1AE72747026C0026DB34 /* Order.swift */,
 				51D8024D2745AC3300306F5D /* Assets.xcassets */,
 				51D8024F2745AC3300306F5D /* Preview Content */,
@@ -152,7 +149,6 @@
 				515D1AE82747026C0026DB34 /* Order.swift in Sources */,
 				515D1AEA274704BB0026DB34 /* AddressView.swift in Sources */,
 				515D1AEC274706C90026DB34 /* CheckoutView.swift in Sources */,
-				E3E57AD2297080770074DD72 /* Swift-EmptyChecking.swift in Sources */,
 				51D8024C2745AC3100306F5D /* ContentView.swift in Sources */,
 				51D8024A2745AC3100306F5D /* CupcakeCornerApp.swift in Sources */,
 			);
