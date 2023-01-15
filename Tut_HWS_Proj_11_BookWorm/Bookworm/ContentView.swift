@@ -30,12 +30,14 @@ struct ContentView: View {
                             VStack(alignment: .leading) {
                                 Text(book.title ?? "Unknown Title")
                                     .font(.headline)
+                                    .foregroundColor(book.rating == 1 ? .red : .primary)
 
                                 Text(book.author ?? "Unknown Author")
                                     .foregroundColor(.secondary)
                             }
                         }
                     }
+                    .opacity(<#T##opacity: Double##Double#>)
                 }
                 .onDelete(perform: deleteBooks)
             }
@@ -65,7 +67,7 @@ struct ContentView: View {
             moc.delete(book)
         }
 
-//        try? moc.save()
+        try? moc.save() // it also saves the delete. Means if you delete you have to save the last status otherwise the next time you open the app you will see that record again
     }
 }
 
