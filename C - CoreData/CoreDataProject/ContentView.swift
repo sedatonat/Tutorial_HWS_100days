@@ -12,7 +12,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var lastNameFilter = "A"
     @State private var filterType = FilterType.contains
-    @State private var sortDescriptors = [SortDescriptor<Singer>]()
+    @State private var sortDescriptors = [SortDescriptor<Singer>]()  // here "()" means there is no sorting in advance
 
     var body: some View {
         VStack {
