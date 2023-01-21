@@ -47,6 +47,7 @@ struct ContentView: View {
             await MainActor.run {
                 updateCache(with: users)
             }
+            
         } catch {
             print("Download failed")
         }

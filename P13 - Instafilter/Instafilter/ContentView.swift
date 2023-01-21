@@ -11,7 +11,10 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var image: Image?
+
     @State private var filterIntensity = 0.5
+    @State private var filterRadius = 5.0
+    @State private var filterScale = 5.0
 
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
@@ -21,6 +24,7 @@ struct ContentView: View {
     let context = CIContext()
 
     @State private var showingFilterSheet = false
+    @State private var showingSaveError = false
 
     var body: some View {
         NavigationView {
@@ -41,12 +45,32 @@ struct ContentView: View {
                     showingImagePicker = true
                 }
 
-                HStack {
-                    Text("Intensity")
-                    Slider(value: $filterIntensity)
-                        .onChange(of: filterIntensity) { _ in applyProcessing() }
+                if currentFilter.inputKeys.contains(kCIInputIntensityKey) {
+                    HStack {
+                        Text("Intensity")
+                        Slider(value: $filterIntensity)
+                            .onChange(of: filterIntensity) { _ in applyProcessing() }
+                    }
+                    .padding(.vertical)
                 }
-                .padding(.vertical)
+
+                if currentFilter.inputKeys.contains(kCIInputRadiusKey) {
+                    HStack {
+                        Text("Radius")
+                        Slider(value: $filterRadius, in: 0...200)
+                            .onChange(of: filterRadius) { _ in applyProcessing() }
+                    }
+                    .padding(.vertical)
+                }
+
+                if currentFilter.inputKeys.contains(kCIInputScaleKey) {
+                    HStack {
+                        Text("Scale")
+                        Slider(value: $filterScale, in: 0...10)
+                            .onChange(of: filterScale) { _ in applyProcessing() }
+                    }
+                    .padding(.vertical)
+                }
 
                 HStack {
                     Button("Change Filter") {
@@ -56,6 +80,7 @@ struct ContentView: View {
                     Spacer()
 
                     Button("Save", action: save)
+                        .disabled(inputImage == nil)
                 }
             }
             .padding([.horizontal, .bottom])
@@ -65,14 +90,27 @@ struct ContentView: View {
                 ImagePicker(image: $inputImage)
             }
             .confirmationDialog("Select a filter", isPresented: $showingFilterSheet) {
-                Button("Crystallize") { setFilter(CIFilter.crystallize()) }
-                Button("Edges") { setFilter(CIFilter.edges()) }
-                Button("Gaussian Blur") { setFilter(CIFilter.gaussianBlur()) }
-                Button("Pixellate") { setFilter(CIFilter.pixellate()) }
-                Button("Sepia Tone") { setFilter(CIFilter.sepiaTone()) }
-                Button("Unsharp Mask") { setFilter(CIFilter.unsharpMask()) }
-                Button("Vignette") { setFilter(CIFilter.vignette()) }
-                Button("Cancel", role: .cancel) { }
+Group {  // Since SwiftUI has a limit of 10 buttons in a view it had to be groupped
+    Button("Bloom") { setFilter(CIFilter.bloom()) }
+    Button("Crystallize") { setFilter(CIFilter.crystallize()) }
+    Button("Edges") { setFilter(CIFilter.edges()) }
+    Button("Gaussian Blur") { setFilter(CIFilter.gaussianBlur()) }
+    Button("Noir") { setFilter(CIFilter.photoEffectNoir()) }
+    Button("Pixellate") { setFilter(CIFilter.pixellate()) }
+    Button("Pointillize") { setFilter(CIFilter.pointillize()) }
+    Button("Sepia Tone") { setFilter(CIFilter.sepiaTone()) }
+    Button("Unsharp Mask") { setFilter(CIFilter.unsharpMask()) }
+    Button("Vignette") { setFilter(CIFilter.vignette()) }
+}
+
+Group {
+    Button("Cancel", role: .cancel) { }
+}
+            }
+            .alert("Oops!", isPresented: $showingSaveError) {
+                Button("OK") { }
+            } message: {
+                Text("Sorry, there was an error saving your image – please check that you have allowed permission for this app to save photos.")
             }
         }
     }
@@ -106,8 +144,8 @@ struct ContentView: View {
         let inputKeys = currentFilter.inputKeys
 
         if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey) }
-        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey) }
-        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey) }
+        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterRadius, forKey: kCIInputRadiusKey) }
+        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterScale, forKey: kCIInputScaleKey) }
 
         guard let outputImage = currentFilter.outputImage else { return }
 
