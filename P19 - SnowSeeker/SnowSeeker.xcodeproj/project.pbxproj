@@ -78,8 +78,8 @@
 				518F97BB27A0A5440035AA81 /* Facility.swift */,
 				51BFC066279E09E0001ADED8 /* SkiDetailsView.swift */,
 				51BFC068279E0A86001ADED8 /* ResortDetailsView.swift */,
-				51BFC05C279E0141001ADED8 /* resorts.json */,
 				518F97BD27A0A9CA0035AA81 /* Favorites.swift */,
+				51BFC05C279E0141001ADED8 /* resorts.json */,
 				519D991327973FF7004DD0D1 /* Assets.xcassets */,
 				519D991527973FF7004DD0D1 /* Preview Content */,
 			);

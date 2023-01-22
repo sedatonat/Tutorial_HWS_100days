@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		512110A6279194810019561D /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512110A5279194810019561D /* FileManager-DocumentsDirectory.swift */; };
+		512110A8279194A30019561D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512110A7279194A30019561D /* DataManager.swift */; };
 		51920CF127886EB100C66951 /* FlashzillaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51920CF027886EB100C66951 /* FlashzillaApp.swift */; };
 		51920CF327886EB100C66951 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51920CF227886EB100C66951 /* ContentView.swift */; };
 		51920CF527886EB300C66951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51920CF427886EB300C66951 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		512110A5279194810019561D /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
+		512110A7279194A30019561D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		51920CED27886EB100C66951 /* Flashzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51920CF027886EB100C66951 /* FlashzillaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashzillaApp.swift; sourceTree = "<group>"; };
 		51920CF227886EB100C66951 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				51BA8C5A278B125C00A3D9A5 /* CardView.swift */,
 				51BA8C58278B11A900A3D9A5 /* Card.swift */,
 				51B67856278E45390095B91A /* EditCards.swift */,
+				512110A5279194810019561D /* FileManager-DocumentsDirectory.swift */,
+				512110A7279194A30019561D /* DataManager.swift */,
 				51920CF427886EB300C66951 /* Assets.xcassets */,
 				51920CF627886EB300C66951 /* Preview Content */,
 			);
@@ -146,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512110A6279194810019561D /* FileManager-DocumentsDirectory.swift in Sources */,
 				51920CF327886EB100C66951 /* ContentView.swift in Sources */,
 				51BA8C59278B11A900A3D9A5 /* Card.swift in Sources */,
+				512110A8279194A30019561D /* DataManager.swift in Sources */,
 				51BA8C5B278B125C00A3D9A5 /* CardView.swift in Sources */,
 				51B67857278E45390095B91A /* EditCards.swift in Sources */,
 				51920CF127886EB100C66951 /* FlashzillaApp.swift in Sources */,
