@@ -65,13 +65,13 @@ struct EditView: View {
         }
     }
 
-    init(location: Location, onSave: @escaping (Location) -> Void) {
-        self.location = location
-        self.onSave = onSave
+init(location: Location, onSave: @escaping (Location) -> Void) {  // escape says to swift stay alive the memory we will call that later on
+    self.location = location
+    self.onSave = onSave
 
-        _name = State(initialValue: location.name)
-        _description = State(initialValue: location.description)
-    }
+    _name = State(initialValue: location.name)
+    _description = State(initialValue: location.description)
+}
 
     func fetchNearbyPlaces() async {
         let urlString = "https://en.wikipedia.org/w/api.php?ggscoord=\(location.coordinate.latitude)%7C\(location.coordinate.longitude)&action=query&prop=coordinates%7Cpageimages%7Cpageterms&colimit=50&piprop=thumbnail&pithumbsize=500&pilimit=50&wbptterms=description&generator=geosearch&ggsradius=10000&ggslimit=50&format=json"
