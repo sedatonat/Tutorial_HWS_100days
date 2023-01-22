@@ -75,8 +75,9 @@ struct ContentView: View {
                 selectedPicture = Int.random(in: 0...3)
             }
             .accessibilityLabel(labels[selectedPicture])
-            .accessibilityAddTraits(.isButton)
-            .accessibilityRemoveTraits(.isImage)
+            .accessibilityAddTraits(.isButton) // read description only from button
+            .accessibilityRemoveTraits(.isImage)  // do not read description from image
+    
     }
 }
 
