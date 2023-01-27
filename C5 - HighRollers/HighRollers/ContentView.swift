@@ -17,6 +17,7 @@ struct ContentView: View {
     @State private var currentResult = DiceResult(type: 0, number: 0)
 
     let timer = Timer.publish(every: 0.1, tolerance: 0.1, on: .main, in: .common).autoconnect()
+    // .autoconnect() means start immediately
     @State private var stoppedDice = 0
 
     @State private var feedback = UIImpactFeedbackGenerator(style: .rigid)
@@ -61,6 +62,8 @@ struct ContentView: View {
                 }
                 .disabled(stoppedDice < currentResult.rolls.count)
 
+                
+                // Results List
                 if savedResults.isEmpty == false {
                     Section("Previous results") {
                         ForEach(savedResults) { result in
@@ -108,7 +111,7 @@ struct ContentView: View {
         stoppedDice += 1
 
         if stoppedDice == numberToRoll {
-            savedResults.insert(currentResult, at: 0)
+            savedResults.insert(currentResult, at: 0) // always add last result to the top
             save()
         }
     }
