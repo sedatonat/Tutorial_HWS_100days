@@ -42,7 +42,7 @@ struct ContentView: View {
                             .scaledToFill()
                             .frame(width: 40, height: 25)
                             .clipShape(RoundedRectangle(cornerRadius: 5))
-                            .overlay(
+                            .overlay(  // adds a black line to the edges of flags
                                 RoundedRectangle(cornerRadius: 5)
                                     .stroke(.black, lineWidth: 1)
                             )
@@ -54,7 +54,7 @@ struct ContentView: View {
                                 .foregroundColor(.secondary)
                         }
 
-                        if favorites.contains(resort) {
+                        if favorites.contains(resort) {  // it is in the favorite list
                             Spacer()
                             Image(systemName: "heart.fill")
                                 .accessibilityLabel("This is a favorite resort")
