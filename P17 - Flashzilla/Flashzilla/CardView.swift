@@ -70,7 +70,7 @@ struct CardView: View {
         .rotationEffect(.degrees(Double(offset.width / 5)))
         .offset(x: offset.width * 5, y: 0)
         .opacity(2 - Double(abs(offset.width / 50)))
-        .accessibilityAddTraits(.isButton)
+        .accessibilityAddTraits(.isButton)  // We are telling the accessibility is this is a button
         .gesture(
             DragGesture()
                 .onChanged { gesture in

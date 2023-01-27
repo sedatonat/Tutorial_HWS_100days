@@ -50,8 +50,8 @@ struct ContentView: View {
                             }
                         }
                         .stacked(at: item.offset, in: cards.count)
-                        .allowsHitTesting(item.offset == cards.count - 1)
-                        .accessibilityHidden(item.offset < cards.count - 1)
+                        .allowsHitTesting(item.offset == cards.count - 1) // arkadaki kartlara erisimi engelliyor
+                        .accessibilityHidden(item.offset < cards.count - 1)  // preventing tho voiceover to read other cards
                     }
                 }
                 .allowsHitTesting(timeRemaining > 0)
