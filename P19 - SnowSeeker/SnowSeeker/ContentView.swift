@@ -78,7 +78,7 @@ struct ContentView: View {
                 Button("By Country") { sortType = .country }
             }
 
-            WelcomeView()
+            WelcomeView()  // Here SwiftUI understands that if the layout is LS show it if not don't. Thus it is only visible in LandScape Mode
         }
         .environmentObject(favorites)
     }
