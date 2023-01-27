@@ -30,7 +30,7 @@ struct ResortView: View {
                         .padding(10)
                         .background(.black.opacity(0.7))
                         .foregroundColor(.white)
-                        .offset(x: -5, y: -5)
+                        .offset(x: -5, y: -5)  // locate the text to the bottom of rightmost
                 }
 
                 HStack {
