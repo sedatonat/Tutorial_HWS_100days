@@ -52,6 +52,8 @@ struct ResortView: View {
 
                     Text("Facilities")
                         .font(.headline)
+                    
+                    Text(resort.facilities, format: .list(type: .or))
 
                     HStack {
                         ForEach(resort.facilityTypes) { facility in

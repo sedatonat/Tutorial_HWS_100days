@@ -41,7 +41,7 @@ struct ResortDetailsView: View {
                     .font(.title3)
             }
         }
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity) // give as much as space it needs
     }
 }
 
